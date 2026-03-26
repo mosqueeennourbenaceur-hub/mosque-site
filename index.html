@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>مسجد النّور</title>
 
-<!-- Google Font عربي -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -69,16 +69,10 @@ h2 {
 }
 
 /* IFRAME */
-iframe {
+iframe.widget {
     width: 100%;
     border-radius: 15px;
-}
-
-/* PRAYER TIMES WIDGET */
-#mawaqit {
-    border: 2px solid #198754;
-    border-radius: 15px;
-    overflow: hidden;
+    height: 400px;
 }
 
 /* FOOTER */
@@ -114,16 +108,15 @@ footer {
     <!-- PRAYER TIMES -->
     <div class="card">
         <h2>🕓 أوقات الصلاة</h2>
-        <div id="mawaqit"></div>
+        <iframe src="//mawaqit.net/ar/w/msjd-lnwr-bn-nsr-bn-nsr-30020-algeria?showOnly5PrayerTimes=0" frameborder="0" scrolling="no" class="widget"></iframe>
     </div>
 
     <!-- LOCATION -->
     <div class="card">
         <h2>📍 الموقع</h2>
         <iframe 
-        src="https://maps.google.com/maps?q=33.1,6.06&z=15&output=embed"
-        height="350">
-        </iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.095950297691!2d6.074916015213434!3d33.13936198093395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128f5c7d6d6db23b%3A0x1c2053a3d1a64c85!2z2YXZhti02Kkg2KfZhNi52YrYsdin2YjYpyDZhNmI2KjZhCDYp9mE2LnYqNin2Kog2YXYsdio2YjYsdip2KfZhNmI2YjYqQ!5e0!3m2!1sar!2sdz!4v1698408273145!5m2!1sar!2sdz"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <!-- CONTACT -->
@@ -138,15 +131,6 @@ footer {
 <footer>
     <p>© مسجد النّور - جميع الحقوق محفوظة</p>
 </footer>
-
-<!-- MAWAQIT SCRIPT -->
-<script src="https://mawaqit.net/js/widget.js"></script>
-<script>
-new MawaqitWidget({
-    mosqueUuid: "masjid-en-nour-benaceur",
-    selector: "#mawaqit"
-});
-</script>
 
 </body>
 </html>
