@@ -7,7 +7,7 @@
 <style>
 body {
     margin: 0;
-    font-family: 'Tahoma';
+    font-family: Tahoma;
     background: #f0f7f4;
 }
 
@@ -19,16 +19,17 @@ header {
     text-align: center;
 }
 
-/* CARDS */
+/* CONTAINER */
 .container {
     padding: 20px;
 }
 
+/* CARDS */
 .card {
     background: white;
     margin: 20px auto;
     padding: 20px;
-    max-width: 600px;
+    max-width: 650px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -63,6 +64,13 @@ footer {
 
 <div class="container">
 
+    <!-- PRAYER TIMES -->
+    <div class="card">
+        <h2>🕓 أوقات الصلاة</h2>
+        <div id="mawaqit"></div>
+    </div>
+
+    <!-- LOCATION -->
     <div class="card">
         <h2>📍 الموقع</h2>
         <iframe 
@@ -71,16 +79,7 @@ footer {
         </iframe>
     </div>
 
-    <div class="card">
-        <h2>🕓 أوقات الصلاة</h2>
-        <iframe 
-        src="https://mawaqit.net/ar/w/msjd-lnwr-bn-nsr-bn-nsr-30020-algeria?showOnly5PrayerTimes=0"
-        height="400"
-        frameborder="0"
-        scrolling="no">
-        </iframe>
-    </div>
-
+    <!-- CONTACT -->
     <div class="card">
         <h2>📞 معلومات الاتصال</h2>
         <p>📧 mosquee.ennour.benaceur@gmail.com</p>
@@ -92,6 +91,15 @@ footer {
 <footer>
     <p>© مسجد النّور - جميع الحقوق محفوظة</p>
 </footer>
+
+<!-- MAWAQIT SCRIPT -->
+<script src="https://mawaqit.net/js/widget.js"></script>
+<script>
+new MawaqitWidget({
+    mosqueUuid: "masjid-en-nour-benaceur",
+    selector: "#mawaqit"
+});
+</script>
 
 </body>
 </html>
